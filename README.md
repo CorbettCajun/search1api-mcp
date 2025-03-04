@@ -13,6 +13,7 @@ https://github.com/user-attachments/assets/58bc98ae-3b6b-442c-a7fc-010508b5f028
 - Website sitemap extraction
 - Deep thinking and complex problem solving with DeepSeek R1
 - Seamless integration with Claude Desktop, Cursor and Windsurf
+- TypeScript support for improved code quality and maintainability
 
 ## Tools
 
@@ -56,8 +57,29 @@ https://github.com/user-attachments/assets/58bc98ae-3b6b-442c-a7fc-010508b5f028
 1. Register at [Search1API](https://www.search1api.com/?utm_source=mcp)
 2. Get your api key and 100 free credits
 
-### 2. Configure 
-#### 2.1 Claude Desktop
+### 2. Development Setup
+This project now uses TypeScript for improved code quality and maintainability.
+
+#### 2.1 Installation
+```bash
+# Clone the repository
+git clone https://github.com/CorbettCajun/search1api-mcp.git
+cd search1api-mcp
+
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+```
+
+#### 2.2 Development Commands
+- `npm run build` - Build the TypeScript files
+- `npm run watch` - Watch for changes and rebuild automatically
+- `npm run inspector` - Run the MCP inspector
+
+### 3. Configure 
+#### 3.1 Claude Desktop
 Update your Claude configuration file (`claude_desktop_config.json`) with the following content:
 
 ```json
@@ -78,7 +100,7 @@ Configuration file location:
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
-#### 2.2 Cursor
+#### 3.2 Cursor
 Easy way:
 1. Open Cursor Settings to add new MCP server `search1api` with the command `env SEARCH1API_KEY=your-search1api-key npx -y search1api-mcp`
 2. Add your own Search1API key to the command
@@ -90,7 +112,7 @@ Safe way:
 
 Read the Cursor MCP Server [Official Documentation](https://docs.cursor.com/context/model-context-protocol#adding-an-mcp-server-to-cursor) to get more information.
 
-#### 2.3 Windsurf
+#### 3.3 Windsurf
 Update your Windsurf configuration file (`mcp_config.json`) with the following content:
 
 ```json
@@ -108,10 +130,11 @@ Update your Windsurf configuration file (`mcp_config.json`) with the following c
 ```
 Read the Windsurf MCP Server [Official Documentation](https://docs.codeium.com/windsurf/mcp) to get more information.
 
-**Notice: After the configuration is done, you can close Windsurf offcial web tools to save your credits**
+**Notice: After the configuration is done, you can close Windsurf official web tools to save your credits**
 
 ## Version History
 
+- v0.1.5: Migrated to TypeScript for improved code quality and maintainability
 - v0.1.4: Added reasoning tool with deepseek r1 and updated the Cursor and Windsurf configuration guide
 - v0.1.3: Added news search functionality
 - v0.1.2: Added sitemap functionality
