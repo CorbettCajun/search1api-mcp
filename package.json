@@ -5,14 +5,16 @@
   "private": false,
   "type": "module",
   "bin": {
-    "search1api-mcp": "src/index.js"
+    "search1api-mcp": "build/index.js"
   },
   "files": [
-    "src"
+    "build"
   ],
   "scripts": {
-    "prepare": "chmod +x src/index.js",
-    "inspector": "npx @modelcontextprotocol/inspector src/index.js"
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
